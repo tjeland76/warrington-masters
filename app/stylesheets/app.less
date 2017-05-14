@@ -1,0 +1,780 @@
+﻿@import url(https://fonts.googleapis.com/css?family=Muli:400,300italic,300,400italic);
+
+html, body {
+    color: #555;
+    height:100%;
+    font-size: 19px;
+    font-family: 'Muli', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.5em;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.wmscContainer {
+    padding-top:110px;
+}
+.wmscSplashContainer {
+    max-width: 100%;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    height: 100%;
+}
+
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
+
+select {
+    background: url(../img/FAQArrowDown.png) no-repeat 97% center;
+    background-size: 16px auto;
+    appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+.mastheadWrapper {
+    background-color: #B2B3B3;
+}
+
+#masthead {
+    color:#fff;
+    margin: 0;
+    padding:0;
+}
+
+#logo {
+    height: 100px;
+    cursor: pointer;
+    padding: 15px 0;
+}
+
+.pageContainer {
+    padding-top: 30px;
+}
+
+.newsDate {
+    display: inline-block;
+    width: 240px;
+}
+#footer a.page-scroll {
+    color:#fff;
+    padding-right: 25px;
+}
+
+#footer .page-scroll {
+    cursor: pointer;
+}
+
+.mediaNav > a {
+    display: inline-block;
+    line-height: 34px;
+    padding: 0 0 0 44px;
+    height: 36px;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 37px 38px;
+    cursor: pointer;
+    margin: 0 3px 3px;
+}
+
+.twitter {
+    background-image:url('../img/TwitterLogo_white.png');
+}
+
+.mediaNav > .facebook {
+    background-image:url('../img/FB-f-Logo__blue_29.png');
+    background-size: 56%;
+}
+
+.modalMasthead {
+    background-color: #233a58;
+    width: 100%;
+    background-size: auto 45px;
+    height:60px;
+    background-position:0 center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.genericButton {
+    border: none;
+    height: 25px;
+    line-height: 25px;
+    padding: 0 20px;
+    font-size: 0.75em;
+    font-weight: bold;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    cursor: hand;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+
+.greenButton {
+    margin: 0 10px 0 0;
+    color: #fff;
+    background-color: #e45f4d;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.8em;
+}
+
+.greenButton:hover {
+    text-decoration: underline;
+}
+
+.submitButton {
+    height: 35px;
+    line-height: 35px;
+    font-size: 1em;
+    margin: 0;
+}
+
+.whiteButton {
+    background-color: #fff;
+    border:solid 1px #c1d82f;
+    line-height: 23px;
+}
+
+.blueButton {
+    margin: 0 10px 0 0;
+    background-color: #233a58;
+    color:#fff;
+}
+
+#footer {
+    background-color:#B2B3B3;
+    color:#fff;
+    position: relative;
+    margin: 0 auto;
+    line-height: 1.6em;
+    font-size: 0.9em;
+}
+
+#footer .row {
+    padding-top: 10px;
+}
+
+#footerTerms {
+    font-size: 0.7em;
+    margin-top: 5px;
+    margin-top: 5px;
+}
+/*
+#app {
+    position: relative;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -100px;
+    padding-bottom: 100px;
+}
+*/
+@media (min-width: 992px) {
+    .col-md-8.formModelContainer {
+        padding-right: 0;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+@-webkit-keyframes fadeOut {
+    from { opacity: 1; }
+      to { opacity: 0; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+      to { opacity: 0; }
+}
+
+.overlay {
+    background-color: transparent;
+    display: block!important;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    opacity: 1;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+.ng-hide.overlay {
+    opacity: 0;
+    -webkit-animation: fadeOut 1s;
+    animation: fadeOut 1s;
+}
+
+.spinner {
+    background-position: center;
+    background-size: 100%;
+    background-image: url(../img/spinner.gif);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    top:50%;
+    left:50%;
+    margin-top:-60px;
+    margin-left:-60px;
+}
+
+.row.selected {
+    background-color:#ccc;
+}
+
+.errors.ng-active {
+    color: #b94a48;
+    padding-top: 10px;
+}
+
+.error {
+    color:#b94a48;
+}
+
+.hlink {
+    display:block;
+    font-size:0.8em;
+    color:blue;
+    padding: 5px 0;
+    text-decoration:underline;
+}
+
+.hlink:hover {
+    text-decoration:none;
+}
+
+.icon {
+    font-size:0.8em;
+    line-height: 19px;
+    font-style: italic;
+    border: solid 1px #999;
+    text-align: center;
+    background-color: #ccc;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.errorSummaryMessage {
+    background-color: #ffe1ff;
+    border:solid 2px #f00;
+    border-radius:5px;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    padding:10px;
+    margin:0 0 10px 0;
+}
+
+.trainingDay {
+    font-weight:bold;
+}
+
+/* Desktop tweaks */
+@media (min-width: 768px) {
+
+    .trainingTimesTable {
+        width: 70%;
+    }
+
+}
+
+.formWarning {
+    background-color: #f1f1f1;
+    line-height: 25px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border: solid 1px #b94a48;
+    padding: 10px;
+}
+
+.dropdown-toggle {
+    background-color: #fff;
+    border: solid 1px #ccc;
+    color: #333;
+    min-height: 36px;
+    width: 100%;
+    text-align: left;
+}
+
+.btn .caret {
+    float: right;
+    margin-top: 9px;
+    border-top-color: #333;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+  color: #333;
+  background-color: #fff;
+  border: solid 1px #888;
+}
+
+.dropdownLabel {
+    white-space: initial;
+    text-overflow: ellipsis;
+    width: 96%;
+    float: left;
+    overflow: hidden;
+}
+
+.message {
+    font-style: italic;
+}
+
+/* Desktop tweaks */
+@media (min-width: 768px) {
+    #footer {
+        height: 108px;
+    }
+}
+
+/* Mobile tweaks */
+@media (max-width: 767px) {
+    
+    .genericButton {
+        height: 44px;
+        line-height: 44px;
+        margin-top: 10px;
+    }
+
+    #footer .page-scroll {
+        display: inline-block;
+        padding-right: 20px;
+    }
+
+    .trainingTimesTable {
+        width: 100%;
+    }
+
+    #logo {
+        height: 55px !important;
+    }
+
+    #splashNav {
+        height: 65px !important;
+    }
+
+    #splashNav img {
+        height: 33px !important;
+    }
+
+    #myNavbar {
+        overflow: hidden;
+    }
+}
+
+
+
+body {
+    color: #666;
+}
+
+h2 {
+    font-size: 2.2em;
+}
+
+h3 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.splash h4 {
+    font-weight: bold;
+    line-height: 1.4em;
+}
+/*
+.splash #app > .container {
+    max-width: 100%;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    height: 100%;
+}
+*/
+.flexWrapper {
+    display: flex;
+    flex-direction: column;
+    -ms-flex-direction: column;
+}
+
+section {
+    -ms-flex-direction: column;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    align-items: center;
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
+}
+
+section .container {
+    /*width: 100%;*/
+}
+
+#masthead img {
+    margin-left: -10px;
+    margin-top: 10px;
+}
+
+#splashNav img {
+   height: 100%;
+}
+
+#landing {
+    padding-top:0;
+}
+
+#landing > .container {
+width:100%;
+}
+
+#news {
+    padding: 20px 0;
+}
+
+.landingSectionHeaderRow {
+    margin-bottom: 10px;
+}
+
+.landingSection {
+    padding: 0 15px 0 0;
+}
+
+.landingSection > div {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.landingSectionImage {
+    position: relative;
+    cursor: pointer;
+    display: block;
+}
+
+.landingSectionHeader {
+    background-color: #39588D;
+    color: #fff;
+    font-weight: bold;
+}
+
+.landingSectionHeadline {
+    text-align: center;
+    font-size: 0.8em;
+    bottom: 0;
+    padding: 0 15px;
+    position: absolute;
+    background-color: #ccc;
+    width: 100%;
+    font-weight: bold;
+}
+
+.landingSectionImage img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.landingSectionImage:hover {
+    opacity: 0.8;
+}
+
+#landing h2 {
+    margin-top: 0;
+}
+
+#splashNav {
+    height: 110px;
+    background-color: #fff;
+}
+
+#splashNav.on {
+    top: 0;
+}
+
+#splashNav.navbar-default .navbar-nav > li > a {
+    color: #39588D;
+    background-color: #fff;
+    text-transform: uppercase;
+    font-size: 0.85em;
+    font-weight: bold;
+}
+
+.navbar-nav a:hover {
+    background-color: #f1f1f1 !important;
+}
+
+#splashNav.navbar-default .navbar-nav > .active > a {
+    background-color: #cccccc;
+}
+
+#splashNav.navbar-default {
+    border-bottom: solid 10px #39588D;
+}
+
+p {    
+    margin:0 0 20px 0;
+}
+
+.page-scroll.greenButton {
+    padding: 0 10px;
+    margin: 10px 0 0;
+    height: 36px;
+    line-height: 35px;
+    font-size: 0.75em;
+}
+
+.splashPageBackground {
+    position: relative;
+}
+
+.landingOverlay {
+    background-color: rgba(0,0,0,0.8);
+    margin: 0 -15px;
+    opacity: 0.7;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+
+.landingPanel {
+    z-index: 1;
+    color: #fff;
+    position: relative;
+    padding: 25px;
+}
+
+.landingPanel .landingButton {
+    display: inline-block;
+    min-width: 125px;
+    margin-right: 15px;
+    padding: 0 10px;  
+}
+
+#landing {
+    min-height: 45vh;
+}
+
+.splashPageBackground:before {
+    position: absolute;
+    content: ' ';
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+}
+
+.splashPageBackground:before {
+    background-image: url('../img/blocks.jpg');
+    opacity: 0.7;
+}
+
+.reverseXImage:before {
+     -webkit-transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.nav {
+    text-align: center;
+     border-radius: 3px;
+     -webkit-border-radius: 3px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+#landingFooter {
+    color: #fff;
+    position: absolute;
+    bottom: 5px;
+}
+
+.navbar-toggle {
+    float:left;
+}
+
+#landing .mastheadWrapper .container {
+    padding-left:0;
+}
+
+.form-control {
+    font-size: 1em;    
+}
+
+#landing > .container > .row {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+/* Desktop tweaks */
+@media (min-width: 768px) {
+    
+    .container.view {
+        padding-top: 110px;
+    }
+
+    .anchorNav {
+        float: right;
+        height: 100px;
+    }
+
+    .navbar-nav > li > a {
+        font-size: 1em;
+    }
+
+    .navbar > .container .navbar-brand {
+        margin-left: 0;
+    }
+
+    #splashNav.navbar-default .navbar-nav > li > a {
+        padding: 0 15px 5px 15px;
+        display: table-cell;
+        vertical-align: bottom;
+        height: 100px;
+        font-size: 0.5em;
+    }
+
+.landingSectionImage img {
+    max-height: 100%;
+    max-width: 100%;
+    width: 375px;
+height:250px;
+}
+
+}
+
+@media (min-width: 992px) {
+    #splashNav.navbar-default .navbar-nav > li > a {
+        
+        font-size: 0.85em;
+    }
+}
+
+/* Mobile tweaks */
+@media (max-width: 767px) {
+    
+    .form-control {
+        height:44px;
+    }
+    .container.view {
+        padding-top: 55px;
+    }
+
+    .splash .container.view {
+        padding-top: 0;
+    }
+
+    .page-scroll.greenButton {
+        height: 44px;
+        line-height: 42px;
+        border-radius: 3px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+    }
+
+    .splashPageBackground {
+        background-color: #233a58;
+        color: #fff;
+    }
+
+    .splashPageBackground:before {
+        opacity: 0.4;
+    }
+
+    .navbar-default .navbar-toggle {
+        border-color:transparent;
+        width: 44px;
+        padding: 0;
+        margin: 5px 10px 0 0;
+        border-radius: 0;
+        height: 50px;
+    }
+
+    .landingSection {
+        padding: 0 0px 10px 0;
+    }
+
+    .container > .navbar-header.mediaNav {
+        float:none;
+        display: table;
+        margin: 0 auto 10px;
+    }
+
+    .navbar-default .navbar-toggle .icon-bar {
+        background-color: #909090;
+        margin-left: 9px;
+    }
+
+    #masthead > div {
+        padding-left:0;
+        padding-right:0;
+    }
+
+    .mastheadWrapper .container {
+        padding-right:0;
+    }
+
+    #landing {
+        min-height: 100vh;
+    }
+
+    .navbar-collapse {
+        max-height: 378px;
+    }
+
+    #footer .row {
+        margin: 0;
+    }
+
+}
+
